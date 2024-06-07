@@ -1,0 +1,3 @@
+[submodule "public-service/proto-service/voting-protos"]
+	path = public-service/proto-service/voting-protos
+	url = git@github.com:Azizbek-Qodirov/voting-protos.git
