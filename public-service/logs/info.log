@@ -1,0 +1,111 @@
+[INFO]  2024/05/25 10:51:19 main.go:32: Server started on port :8010
+[INFO]  2024/05/25 12:34:06 main.go:33: Server started on port :8010
+[ERROR]  2024/05/25 12:35:58 user.go:18: User not created: email is not valid
+[ERROR]  2024/05/25 12:36:09 user.go:18: User not created: email is not valid
+[ERROR]  2024/05/25 12:36:14 user.go:18: User not created: phone is not valid
+[ERROR]  2024/05/25 12:36:22 user.go:18: User not created: phone is not valid
+[INFO]  2024/05/25 12:36:27 user.go:22: User created: {Azizbek qodirovazizbek@gmail.com +998905555555}
+[INFO]  2024/05/25 12:43:02 main.go:33: Server started on port :8010
+[INFO]  2024/05/25 12:47:45 main.go:33: Server started on port :8010
+[INFO]  2024/05/25 12:52:14 main.go:33: Server started on port :8010
+[INFO]  2024/05/25 12:53:09 main.go:33: Server started on port :8010
+[INFO]  2024/05/25 13:08:33 main.go:33: Server started on port :8010
+[ERROR]  2024/05/25 13:09:40 user.go:54: User not updated: email is not valid
+[ERROR]  2024/05/25 13:09:44 user.go:54: User not updated: phone is not valid
+[ERROR]  2024/05/25 13:09:52 user.go:54: User not updated: pq: invalid input syntax for type uuid: ""
+[ERROR]  2024/05/25 13:10:04 user.go:54: User not updated: phone is not valid
+[ERROR]  2024/05/25 13:10:05 user.go:54: User not updated: pq: invalid input syntax for type uuid: ""
+[INFO]  2024/05/25 13:10:54 main.go:33: Server started on port :8010
+[INFO]  2024/05/25 13:11:01 user.go:58: User updated: { Azizbek qodirovazizbek@gmail.com +998958885555}
+[INFO]  2024/05/25 13:11:26 user.go:58: User updated: { Azizbek qodirovazizbek@gmail.com +998999999999}
+[ERROR]  2024/05/25 13:11:49 user.go:65: User not deleted: pq: syntax error at or near "WHERE"
+[INFO]  2024/05/25 13:12:12 main.go:33: Server started on port :8010
+[INFO]  2024/05/25 13:12:16 user.go:69: User deleted: 5780e79b-7ec9-41ae-bf40-1348b784eaaa
+[INFO]  2024/05/25 13:24:15 main.go:33: Server started on port :8010
+[INFO]  2024/05/26 16:35:24 main.go:33: Server started on port :8010
+[INFO]  2024/05/27 02:14:03 main.go:33: Server started on port :8010
+[INFO]  2024/05/27 03:54:45 main.go:33: Server started on port :8010
+[INFO]  2024/05/27 03:59:34 user.go:58: User updated: {5780e79b-7ec9-41ae-bf40-1348b784eaaa Azizbek qodirovazizbek@gmail.com +998940031129}
+[ERROR]  2024/05/27 04:01:41 user.go:18: Error when creating user: phone is not valid
+[ERROR]  2024/05/27 04:04:13 user.go:18: Error when creating user: phone is not valid
+[ERROR]  2024/05/27 04:06:13 user.go:18: Error when creating user: phone is not valid
+[ERROR]  2024/05/27 04:07:53 user.go:18: Error when creating user: phone is not valid
+[ERROR]  2024/05/27 04:08:27 user.go:18: Error when creating user: phone is not valid
+[ERROR]  2024/05/27 04:08:40 user.go:18: Error when creating user: phone is not valid
+[ERROR]  2024/05/27 04:09:01 user.go:18: Error when creating user: phone is not valid
+[ERROR]  2024/05/27 04:09:48 user.go:18: Error when creating user: phone is not valid
+[ERROR]  2024/05/27 04:10:07 user.go:18: Error when creating user: phone is not valid
+[ERROR]  2024/05/27 04:10:40 user.go:18: Error when creating user: phone is not valid
+[ERROR]  2024/05/27 04:11:16 user.go:18: Error when creating user: phone is not valid
+[ERROR]  2024/05/27 04:11:44 user.go:18: Error when creating user: phone is not valid
+[ERROR]  2024/05/27 04:11:56 user.go:18: Error when creating user: phone is not valid
+[ERROR]  2024/05/27 04:12:46 user.go:18: Error when creating user: phone is not valid
+[ERROR]  2024/05/27 04:12:55 user.go:18: Error when creating user: phone is not valid
+[ERROR]  2024/05/27 04:13:02 user.go:18: Error when creating user: pq: insert or update on table "cart" violates foreign key constraint "cart_user_id_fkey"
+[INFO]  2024/05/27 04:15:22 main.go:33: Server started on port :8010
+[ERROR]  2024/05/27 04:15:26 user.go:18: Error when creating user: pq: syntax error at or near "{"
+[INFO]  2024/05/27 04:15:40 main.go:33: Server started on port :8010
+[ERROR]  2024/05/27 04:15:42 user.go:18: Error when creating user: pq: insert or update on table "cart" violates foreign key constraint "cart_user_id_fkey"
+[INFO]  2024/05/27 04:17:30 main.go:33: Server started on port :8010
+[ERROR]  2024/05/27 04:17:33 user.go:18: Error when creating user: pq: insert or update on table "cart" violates foreign key constraint "cart_user_id_fkey"
+[INFO]  2024/05/27 04:19:46 main.go:33: Server started on port :8010
+[ERROR]  2024/05/27 04:19:48 user.go:18: Error when creating user: sql: no rows in result set
+[INFO]  2024/05/27 04:20:35 main.go:33: Server started on port :8010
+[ERROR]  2024/05/27 04:20:38 user.go:18: Error when creating user: pq: invalid input syntax for type uuid: ""
+[INFO]  2024/05/27 04:21:18 main.go:33: Server started on port :8010
+[ERROR]  2024/05/27 04:21:21 user.go:18: Error when creating user: pq: invalid input syntax for type uuid: ""
+[INFO]  2024/05/27 04:22:39 main.go:33: Server started on port :8010
+[ERROR]  2024/05/27 04:22:42 user.go:18: Error when creating user: pq: invalid input syntax for type uuid: ""
+[INFO]  2024/05/27 04:22:56 main.go:33: Server started on port :8010
+[ERROR]  2024/05/27 04:22:58 user.go:18: Error when creating user: pq: invalid input syntax for type uuid: ""
+[INFO]  2024/05/27 04:23:32 main.go:33: Server started on port :8010
+[ERROR]  2024/05/27 04:23:34 user.go:18: Error when creating user: pq: insert or update on table "cart" violates foreign key constraint "cart_user_id_fkey"
+[INFO]  2024/05/27 04:25:48 main.go:33: Server started on port :8010
+[ERROR]  2024/05/27 04:25:55 user.go:18: Error when creating user: pq: insert or update on table "cart" violates foreign key constraint "cart_user_id_fkey"
+[INFO]  2024/05/27 04:28:43 main.go:33: Server started on port :8010
+[ERROR]  2024/05/27 04:28:49 user.go:18: Error when creating user: pq: insert or update on table "cart" violates foreign key constraint "cart_user_id_fkey"
+[INFO]  2024/05/27 04:30:59 main.go:33: Server started on port :8010
+[INFO]  2024/05/27 04:31:03 user.go:22: User created: {Name:Kamol Email:kamol@gmail.com Phone:+998950558624}
+[INFO]  2024/05/30 12:13:40 main.go:33: Server started on port :8010
+[INFO]  2024/05/30 12:16:09 user.go:22: User created: {Name:Kamil Email:kamil@gmail.com Phone:+998950558624}
+[INFO]  2024/05/30 12:17:09 main.go:33: Server started on port :8010
+[INFO]  2024/05/30 12:17:17 user.go:22: User created: {Name:Kamsil Email:kamsl@gmail.com Phone:+998950558624}
+[INFO]  2024/05/30 12:26:51 user.go:22: User created: {Name:Kamol Email:kamol@gmail.com Phone:+998950558624}
+[INFO]  2024/05/30 13:46:43 main.go:33: Server started on port :8010
+[INFO]  2024/05/30 13:47:03 user.go:22: User created: name:"Saman"  email:"saman@gmail.com"  phone:"+998950558624"
+[INFO]  2024/05/30 17:27:20 main.go:40: Starting server on port [::]:50051
+[INFO]  2024/05/31 11:20:15 main.go:40: Starting server on port [::]:50051
+[INFO]  2024/05/31 11:49:24 main.go:37: Starting server on port [::]:50051
+[INFO]  2024/05/31 11:56:58 main.go:37: Starting server on port [::]:50051
+[INFO]  2024/05/31 12:00:09 main.go:37: Starting server on port [::]:50051
+[INFO]  2024/05/31 12:04:37 main.go:37: Starting server on port [::]:50051
+[INFO]  2024/05/31 12:06:12 main.go:37: Starting server on port [::]:50051
+[INFO]  2024/05/31 12:06:25 main.go:37: Starting server on port [::]:50051
+[INFO]  2024/05/31 12:10:07 main.go:37: Starting server on port [::]:50051
+[INFO]  2024/05/31 12:12:07 main.go:37: Starting server on port [::]:50051
+[INFO]  2024/05/31 12:12:42 main.go:37: Starting server on port [::]:50051
+[INFO]  2024/05/31 12:13:08 main.go:37: Starting server on port [::]:50051
+[INFO]  2024/05/31 12:13:43 main.go:37: Starting server on port [::]:50051
+[INFO]  2024/05/31 12:14:34 main.go:37: Starting server on port [::]:50051
+[INFO]  2024/05/31 12:15:51 main.go:37: Starting server on port [::]:50051
+[INFO]  2024/05/31 12:16:08 main.go:37: Starting server on port [::]:50051
+[INFO]  2024/05/31 12:17:09 main.go:37: Starting server on port [::]:50051
+[INFO]  2024/06/01 12:15:28 main.go:37: Starting server on port [::]:50051
+[INFO]  2024/06/01 12:33:15 main.go:37: Starting server on port [::]:50051
+[INFO]  2024/06/01 12:48:22 main.go:37: Starting server on port [::]:50051
+[ERROR]  2024/06/01 13:30:50 checkError.go:17: listen tcp :50051: bind: address already in use
+[ERROR]  2024/06/01 13:30:59 checkError.go:17: listen tcp :50051: bind: address already in use
+[INFO]  2024/06/01 13:34:07 main.go:37: Starting server on port [::]:50051
+[INFO]  2024/06/02 09:30:19 main.go:37: Starting server on port [::]:50051
+[INFO]  2024/06/02 10:58:09 main.go:37: Starting server on port [::]:50051
+[INFO]  2024/06/02 11:15:26 main.go:37: Starting server on port [::]:50051
+[INFO]  2024/06/02 11:45:03 main.go:37: Starting server on port [::]:50051
+[INFO]  2024/06/02 11:55:49 main.go:37: Starting server on port [::]:50051
+[INFO]  2024/06/02 12:14:46 main.go:37: Starting server on port [::]:50051
+[INFO]  2024/06/02 12:15:25 main.go:37: Starting server on port [::]:50051
+[INFO]  2024/06/02 12:16:25 main.go:37: Starting server on port [::]:50051
+[INFO]  2024/06/02 12:16:45 main.go:37: Starting server on port [::]:50051
+[INFO]  2024/06/02 21:26:59 main.go:37: Starting server on port [::]:50051
+[INFO]  2024/06/02 22:03:55 main.go:37: Starting server on port [::]:50051
+[INFO]  2024/06/07 12:00:08 main.go:35: Starting server on port [::]:50051
+[INFO]  2024/06/07 14:40:30 main.go:36: Server started at port,  [::]:50051
