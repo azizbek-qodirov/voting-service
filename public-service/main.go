@@ -36,6 +36,7 @@ func main() {
 	s := grpc.NewServer()
 	pb.RegisterPartyServiceServer(s, service.NewPartyService(db))
 	pb.RegisterPublicServiceServer(s, service.NewPublicService(db))
+
 	log.Printf("server listening at %v", listener.Addr())
 	if err := s.Serve(listener); err != nil {
 		log.Fatalf("failed to serve: %v", err)

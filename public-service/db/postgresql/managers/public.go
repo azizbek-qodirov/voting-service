@@ -35,7 +35,7 @@ func (m *PublicManager) Update(context context.Context, public *pb.PublicUpdate)
 		SET name = $1, last_name = $2, phone = $3, email = $4, birthday = $5, gender = $6, party_id = $7
 		WHERE id = $8
 		`
-	_, err := m.conn.Exec(query, public.Name, public.LastName, public.PartyId, public.Email, public.Birthday, public.Gender, public.PartyId, public.Id)
+	_, err := m.conn.Exec(query, public.Name, public.LastName, public.Phone, public.Email, public.Birthday, public.Gender, public.PartyId, public.Id)
 	if err != nil {
 		return err
 	}

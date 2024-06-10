@@ -4,6 +4,8 @@ import (
 	"context"
 	"public-service/db/postgresql"
 	pb "public-service/proto-service/genprotos"
+
+	"github.com/google/uuid"
 )
 
 type PublicService struct {
@@ -16,6 +18,7 @@ func NewPublicService(stg *postgresql.Storage) *PublicService {
 }
 
 func (s *PublicService) Create(context context.Context, party *pb.PublicCreate) (*pb.Void, error) {
+	party.Id = uuid.NewString()
 	return nil, s.stg.PublicI.Create(context, party)
 }
 

@@ -1,0 +1,68 @@
+[INFO]  2024/06/09 03:33:25 main.go:38: Server started on port: :8000
+[INFO]  2024/06/09 04:00:21 main.go:37: Server started on port: :8000
+[INFO]  2024/06/09 04:03:27 main.go:37: Server started on port: :8000
+[INFO]  2024/06/09 04:07:11 main.go:37: Server started on port: :8000
+[INFO]  2024/06/09 04:08:21 main.go:37: Server started on port: :8000
+[INFO]  2024/06/09 04:10:33 main.go:37: Server started on port: :8000
+[INFO]  2024/06/09 23:57:14 main.go:36: Server started on port: :8000
+[INFO]  2024/06/10 00:01:18 main.go:36: Server started on port: :8000
+[INFO]  2024/06/10 00:01:47 main.go:36: Server started on port: :8000
+[INFO]  2024/06/10 00:11:03 main.go:36: Server started on port: :8000
+[INFO]  2024/06/10 00:12:38 main.go:36: Server started on port: :8000
+[ERROR]  2024/06/10 00:12:42 party.go:84: Couldn't create the party: rpc error: code = Unknown desc = pq: invalid input syntax for type date: "2004"
+[INFO]  2024/06/10 00:13:51 main.go:36: Server started on port: :8000
+[INFO]  2024/06/10 00:14:28 main.go:36: Server started on port: :8000
+[INFO]  2024/06/10 00:16:28 main.go:36: Server started on port: :8000
+[ERROR]  2024/06/10 00:16:30 party.go:118: Couldn't update the party: rpc error: code = Unavailable desc = error reading from server: EOF
+[INFO]  2024/06/10 00:17:22 main.go:36: Server started on port: :8000
+[ERROR]  2024/06/10 00:17:30 party.go:120: Couldn't update the party: rpc error: code = Unavailable desc = error reading from server: EOF
+[INFO]  2024/06/10 00:18:21 main.go:36: Server started on port: :8000
+[ERROR]  2024/06/10 00:18:23 party.go:120: Couldn't update the party: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused"
+[ERROR]  2024/06/10 00:18:30 party.go:120: Couldn't update the party: rpc error: code = Unavailable desc = error reading from server: EOF
+[INFO]  2024/06/10 00:19:05 main.go:36: Server started on port: :8000
+[ERROR]  2024/06/10 00:19:10 party.go:120: Couldn't update the party: rpc error: code = Unavailable desc = error reading from server: EOF
+[INFO]  2024/06/10 00:21:30 main.go:36: Server started on port: :8000
+[ERROR]  2024/06/10 00:22:03 party.go:120: Couldn't update the party: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused"
+[ERROR]  2024/06/10 00:22:11 party.go:120: Couldn't update the party: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused"
+[INFO]  2024/06/10 00:22:23 party.go:124: party updated: d3799e34-145c-4daa-92c4-79c8072003be
+[ERROR]  2024/06/10 00:22:45 party.go:145: Couldn't delete the party: rpc error: code = Unavailable desc = error reading from server: EOF
+[ERROR]  2024/06/10 00:23:04 party.go:145: Couldn't delete the party: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused"
+[INFO]  2024/06/10 00:23:10 party.go:149: party deleted: d3799e34-145c-4daa-92c4-79c8072003be
+[INFO]  2024/06/10 00:25:09 public.go:97: Public created
+[INFO]  2024/06/10 00:26:46 main.go:36: Server started on port: :8000
+[INFO]  2024/06/10 00:28:25 main.go:36: Server started on port: :8000
+[INFO]  2024/06/10 00:29:28 main.go:36: Server started on port: :8000
+[INFO]  2024/06/10 00:30:13 main.go:36: Server started on port: :8000
+[INFO]  2024/06/10 00:30:17 main.go:36: Server started on port: :8000
+[ERROR]  2024/06/10 00:30:29 public.go:127: Couldn't update the public: rpc error: code = Unknown desc = pq: value too long for type character varying(13)
+[ERROR]  2024/06/10 00:30:50 public.go:127: Couldn't update the public: rpc error: code = Unknown desc = pq: value too long for type character varying(13)
+[ERROR]  2024/06/10 00:30:55 public.go:127: Couldn't update the public: rpc error: code = Unknown desc = pq: value too long for type character varying(13)
+[ERROR]  2024/06/10 00:31:13 public.go:127: Couldn't update the public: rpc error: code = Unknown desc = pq: value too long for type character varying(13)
+[ERROR]  2024/06/10 00:32:10 public.go:127: Couldn't update the public: rpc error: code = Unknown desc = pq: value too long for type character varying(13)
+[ERROR]  2024/06/10 00:32:22 public.go:127: Couldn't update the public: rpc error: code = Unknown desc = pq: value too long for type character varying(13)
+[INFO]  2024/06/10 00:32:45 public.go:131: Public updated: 4a84de2c-746c-46e2-9362-d4a279c4ae6e
+[INFO]  2024/06/10 00:33:14 public.go:156: Public deleted: 4a84de2c-746c-46e2-9362-d4a279c4ae6e
+[INFO]  2024/06/10 13:52:19 main.go:36: Server started on port: :8000
+[INFO]  2024/06/10 13:53:08 main.go:36: Server started on port: :8000
+[INFO]  2024/06/10 14:07:23 main.go:36: Server started on port: :8000
+[INFO]  2024/06/10 14:07:30 main.go:36: Server started on port: :8000
+[INFO]  2024/06/10 15:00:46 main.go:36: Server started on port: :8000
+[INFO]  2024/06/10 15:03:54 main.go:36: Server started on port: :8000
+[INFO]  2024/06/10 15:05:38 main.go:37: Server started on port: :8000
+[INFO]  2024/06/10 15:06:34 main.go:39: Server started on port: :8000
+[INFO]  2024/06/10 15:08:52 main.go:35: Server started on port: :8000
+[INFO]  2024/06/10 15:08:58 election.go:34: Election created
+[INFO]  2024/06/10 15:11:20 main.go:35: Server started on port: :8000
+[INFO]  2024/06/10 15:11:48 main.go:35: Server started on port: :8000
+[INFO]  2024/06/10 15:12:45 candidate.go:34: Candidate created
+[INFO]  2024/06/10 15:13:49 main.go:35: Server started on port: :8000
+[INFO]  2024/06/10 15:19:54 candidate.go:84: Candidate updated
+[INFO]  2024/06/10 15:22:44 main.go:35: Server started on port: :8000
+[INFO]  2024/06/10 15:26:36 main.go:35: Server started on port: :8000
+[INFO]  2024/06/10 15:27:07 main.go:35: Server started on port: :8000
+[INFO]  2024/06/10 15:27:26 main.go:35: Server started on port: :8000
+[INFO]  2024/06/10 15:29:24 main.go:35: Server started on port: :8000
+[INFO]  2024/06/10 15:31:24 main.go:35: Server started on port: :8000
+[INFO]  2024/06/10 15:31:40 main.go:35: Server started on port: :8000
+[INFO]  2024/06/10 15:32:25 main.go:35: Server started on port: :8000
+[INFO]  2024/06/10 21:17:26 main.go:35: Server started on port: :8000

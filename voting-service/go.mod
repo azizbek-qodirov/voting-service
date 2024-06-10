@@ -1,4 +1,4 @@
-module public-service
+module voting-service
 
 go 1.22.3
 

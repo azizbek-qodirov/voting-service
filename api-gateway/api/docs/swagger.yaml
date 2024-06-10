@@ -1,0 +1,989 @@
+definitions:
+  genprotos.Candidate:
+    properties:
+      election:
+        type: string
+      id:
+        type: string
+      party:
+        type: string
+      public:
+        type: string
+    type: object
+  genprotos.CandidateCreate:
+    properties:
+      ElectionId:
+        type: string
+      PartyId:
+        type: string
+      PublicId:
+        type: string
+    type: object
+  genprotos.Election:
+    properties:
+      date:
+        type: string
+      id:
+        type: string
+      name:
+        type: string
+    type: object
+  genprotos.GetAllCandidate:
+    properties:
+      Candidates:
+        items:
+          $ref: '#/definitions/genprotos.Candidate'
+        type: array
+    type: object
+  genprotos.GetAllElection:
+    properties:
+      elections:
+        items:
+          $ref: '#/definitions/genprotos.Election'
+        type: array
+    type: object
+  genprotos.GetAllPublicVote:
+    properties:
+      publicVotes:
+        items:
+          $ref: '#/definitions/genprotos.PublicVote'
+        type: array
+    type: object
+  genprotos.PartyCreate:
+    properties:
+      description:
+        type: string
+      id:
+        type: string
+      name:
+        type: string
+      opened_date:
+        type: string
+      slogan:
+        type: string
+    type: object
+  genprotos.PartyDelete:
+    properties:
+      id:
+        type: string
+    type: object
+  genprotos.PartyGetAllReq:
+    properties:
+      name:
+        type: string
+      opened_date:
+        type: string
+    type: object
+  genprotos.PartyGetById:
+    properties:
+      id:
+        type: string
+    type: object
+  genprotos.PartyUpdate:
+    properties:
+      description:
+        type: string
+      id:
+        type: string
+      name:
+        type: string
+      opened_date:
+        type: string
+      slogan:
+        type: string
+    type: object
+  genprotos.PublicCreate:
+    properties:
+      birthday:
+        type: string
+      email:
+        type: string
+      gender:
+        type: string
+      id:
+        type: string
+      last_name:
+        type: string
+      name:
+        type: string
+      party_id:
+        type: string
+      phone:
+        type: string
+    type: object
+  genprotos.PublicDelete:
+    properties:
+      id:
+        type: string
+    type: object
+  genprotos.PublicGetAllReq:
+    properties:
+      birthday:
+        type: string
+      email:
+        type: string
+      gender:
+        type: string
+      last_name:
+        type: string
+      name:
+        type: string
+      party_id:
+        type: string
+      phone:
+        type: string
+    type: object
+  genprotos.PublicGetById:
+    properties:
+      id:
+        type: string
+    type: object
+  genprotos.PublicUpdate:
+    properties:
+      birthday:
+        type: string
+      email:
+        type: string
+      gender:
+        type: string
+      id:
+        type: string
+      last_name:
+        type: string
+      name:
+        type: string
+      party_id:
+        type: string
+      phone:
+        type: string
+    type: object
+  genprotos.PublicVote:
+    properties:
+      CandidateId:
+        type: string
+      ElectionId:
+        type: string
+      Id:
+        type: string
+      PublicId:
+        type: string
+    type: object
+  genprotos.PublicVoteCreate:
+    properties:
+      CandidateId:
+        type: string
+      ElectionId:
+        type: string
+      PublicId:
+        type: string
+    type: object
+  genprotos.Void:
+    type: object
+  genprotos.Winner:
+    properties:
+      CandidateId:
+        type: string
+      ElectionId:
+        type: string
+      Votes:
+        type: integer
+    type: object
+info:
+  contact: {}
+paths:
+  /candidate:
+    post:
+      consumes:
+      - application/json
+      description: Creates candidate by reading from body
+      operationId: create_candidate
+      parameters:
+      - description: candiate body data
+        in: body
+        name: Candiate
+        required: true
+        schema:
+          $ref: '#/definitions/genprotos.CandidateCreate'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Candiate created successfully
+          schema:
+            type: string
+        "500":
+          description: Failed to create candidate
+          schema:
+            type: string
+      summary: Creates Candidate
+      tags:
+      - Candidate
+  /candidate/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Deletes candidate by reading id from body
+      operationId: delete_candidate
+      parameters:
+      - description: candiate id data
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Candiate deleted successfully
+          schema:
+            type: string
+        "500":
+          description: Failed to create candidate
+          schema:
+            type: string
+      summary: deletes Candidate
+      tags:
+      - Candidate
+    get:
+      consumes:
+      - application/json
+      description: Gets candidate by reading id from body
+      operationId: get_candidate_by_id
+      parameters:
+      - description: candiate id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/genprotos.Candidate'
+        "500":
+          description: Failed to get candidate by id
+          schema:
+            type: string
+      summary: gets Candidate by id
+      tags:
+      - Candidate
+  /candidate/by-party:
+    get:
+      consumes:
+      - application/json
+      description: Gets all candidates
+      operationId: get_candidates_by_party
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/genprotos.GetAllCandidate'
+        "500":
+          description: Failed to get candidates by party
+          schema:
+            type: string
+      summary: gets Candidate by the party id
+      tags:
+      - Candidate
+  /candidate/update:
+    put:
+      consumes:
+      - application/json
+      description: updates candidate by reading from body
+      operationId: updates_candidate
+      parameters:
+      - description: candiate data
+        in: body
+        name: candiate
+        required: true
+        schema:
+          $ref: '#/definitions/genprotos.Candidate'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Candiate updated successfully
+          schema:
+            type: string
+        "500":
+          description: Failed to create candidate
+          schema:
+            type: string
+      summary: updates Candidate
+      tags:
+      - Candidate
+  /candidates:
+    get:
+      consumes:
+      - application/json
+      description: Gets all candidates
+      operationId: get_all_candidate
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/genprotos.GetAllCandidate'
+        "500":
+          description: Failed to get all candidates
+          schema:
+            type: string
+      summary: gets all Candidate
+      tags:
+      - Candidate
+  /election:
+    post:
+      consumes:
+      - application/json
+      description: Create election
+      operationId: create_election
+      parameters:
+      - description: election body data
+        in: body
+        name: Election
+        required: true
+        schema:
+          $ref: '#/definitions/genprotos.Election'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/genprotos.Void'
+        "500":
+          description: Failed to get product by id
+          schema:
+            type: string
+      summary: Creates Election
+      tags:
+      - Election
+  /election/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Deletes election by reading id
+      operationId: delete_election
+      parameters:
+      - description: election ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Deleted successfully
+          schema:
+            type: string
+        "500":
+          description: Failed to delete election data
+          schema:
+            type: string
+      summary: Deletes Election
+      tags:
+      - Election
+    get:
+      consumes:
+      - application/json
+      description: gets election by reading id  from path
+      operationId: get_election_by_id
+      parameters:
+      - description: election ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/genprotos.Election'
+        "500":
+          description: Failed to get product by id
+          schema:
+            type: string
+      summary: Gets Election by id
+      tags:
+      - Election
+  /election/by-date:
+    get:
+      consumes:
+      - application/json
+      description: Gets Elections by date
+      operationId: get_elections_by_date
+      parameters:
+      - description: election date
+        in: query
+        name: date
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/genprotos.GetAllElection'
+        "500":
+          description: Failed to Get elections data
+          schema:
+            type: string
+      summary: Getss Elections by date
+      tags:
+      - Election
+  /election/update:
+    put:
+      consumes:
+      - application/json
+      description: Updates election by reading election from body
+      operationId: update_election
+      parameters:
+      - description: election data
+        in: body
+        name: election
+        required: true
+        schema:
+          $ref: '#/definitions/genprotos.Election'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/genprotos.Void'
+        "500":
+          description: Failed to update election data
+          schema:
+            type: string
+      summary: Update Election
+      tags:
+      - Election
+  /elections:
+    get:
+      consumes:
+      - application/json
+      description: Gets all Elections
+      operationId: get_all_elections
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/genprotos.GetAllElection'
+        "500":
+          description: Failed to Get all elections
+          schema:
+            type: string
+      summary: Gets all Elections
+      tags:
+      - Election
+  /parties:
+    get:
+      consumes:
+      - application/json
+      description: Get all parties
+      operationId: getallparties
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: party data
+          schema:
+            $ref: '#/definitions/genprotos.PartyGetAllReq'
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+        "404":
+          description: party not found
+          schema:
+            type: string
+        "500":
+          description: Server error
+          schema:
+            type: string
+      summary: Get all parties
+      tags:
+      - party
+  /party:
+    post:
+      consumes:
+      - application/json
+      description: Create parties
+      operationId: createparty
+      parameters:
+      - description: Party data
+        in: body
+        name: party
+        required: true
+        schema:
+          $ref: '#/definitions/genprotos.PartyCreate'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: party created
+          schema:
+            type: string
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+        "404":
+          description: party not found
+          schema:
+            type: string
+        "500":
+          description: Server error
+          schema:
+            type: string
+      summary: Create parties
+      tags:
+      - party
+  /party/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete party
+      operationId: deleteparty
+      parameters:
+      - description: party ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: party data
+          schema:
+            $ref: '#/definitions/genprotos.PartyDelete'
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+        "404":
+          description: party not found
+          schema:
+            type: string
+        "500":
+          description: Server error
+          schema:
+            type: string
+      summary: Delete party
+      tags:
+      - party
+    get:
+      consumes:
+      - application/json
+      description: Get party by ID
+      operationId: getparty
+      parameters:
+      - description: party ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: party data
+          schema:
+            $ref: '#/definitions/genprotos.PartyGetById'
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+        "404":
+          description: party not found
+          schema:
+            type: string
+        "500":
+          description: Server error
+          schema:
+            type: string
+      summary: Get Party By ID
+      tags:
+      - party
+    put:
+      consumes:
+      - application/json
+      description: Update party
+      operationId: updateparty
+      parameters:
+      - description: Party id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: Party data
+        in: body
+        name: public
+        required: true
+        schema:
+          $ref: '#/definitions/genprotos.PartyUpdate'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: party data
+          schema:
+            $ref: '#/definitions/genprotos.PartyUpdate'
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+        "404":
+          description: party not found
+          schema:
+            type: string
+        "500":
+          description: Server error
+          schema:
+            type: string
+      summary: Update party
+      tags:
+      - party
+  /public-vote/{id}:
+    get:
+      consumes:
+      - application/json
+      description: Gets a Public Vote by its ID
+      operationId: get_by_id_public_votes
+      parameters:
+      - description: Public Vote ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/genprotos.PublicVote'
+        "500":
+          description: Failed to get public vote by ID
+          schema:
+            type: string
+      summary: Gets a Public Vote by ID
+      tags:
+      - Public-Votes
+  /public-vote/all:
+    get:
+      consumes:
+      - application/json
+      description: Gets all Public Votes without any filter
+      operationId: get_all_public_votes
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/genprotos.GetAllPublicVote'
+        "500":
+          description: Failed to get public votes
+          schema:
+            type: string
+      summary: Gets all Public Votes
+      tags:
+      - Public-Votes
+  /public-vote/create:
+    post:
+      consumes:
+      - application/json
+      description: Create Public Vote by reading from body
+      operationId: create_public_vote
+      parameters:
+      - description: Public Vote body data
+        in: body
+        name: PublicVote
+        required: true
+        schema:
+          $ref: '#/definitions/genprotos.PublicVoteCreate'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Created successfully
+          schema:
+            type: string
+        "500":
+          description: Failed to create public vote
+          schema:
+            type: string
+      summary: Creates Public Vote
+      tags:
+      - Public-Votes
+  /public-vote/delete:
+    delete:
+      consumes:
+      - application/json
+      description: Deletes a Public Vote by ID
+      operationId: delete_public_votes
+      parameters:
+      - description: Public Vote ID
+        in: query
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Deleted successfully
+          schema:
+            type: string
+        "500":
+          description: Failed to delete public vote
+          schema:
+            type: string
+      summary: Deletes a Public Vote
+      tags:
+      - Public-Votes
+  /public-vote/find-winner:
+    get:
+      consumes:
+      - application/json
+      description: finds the cnadidate withmost botes
+      operationId: fin_the_winner
+      parameters:
+      - description: election ID
+        in: query
+        name: election
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/genprotos.Winner'
+        "500":
+          description: Failed to get public vote by ID
+          schema:
+            type: string
+      summary: find the winner
+      tags:
+      - Public-Votes
+  /public-vote/update:
+    put:
+      consumes:
+      - application/json
+      description: Updates a Public Vote by ID
+      operationId: update_public_votes
+      parameters:
+      - description: Public Vote ID
+        in: query
+        name: id
+        required: true
+        type: string
+      - description: Election ID
+        in: query
+        name: election
+        required: true
+        type: string
+      - description: Public ID
+        in: query
+        name: public
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Updated successfully
+          schema:
+            type: string
+        "500":
+          description: Failed to update public vote
+          schema:
+            type: string
+      summary: Updates a Public Vote
+      tags:
+      - Public-Votes
+  /public/:
+    post:
+      consumes:
+      - application/json
+      description: create public
+      operationId: createpublics
+      parameters:
+      - description: Public data
+        in: body
+        name: public
+        required: true
+        schema:
+          $ref: '#/definitions/genprotos.PublicCreate'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Public data
+          schema:
+            $ref: '#/definitions/genprotos.PublicCreate'
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+        "404":
+          description: Public not found
+          schema:
+            type: string
+        "500":
+          description: Server error
+          schema:
+            type: string
+      summary: create public
+      tags:
+      - Public
+  /public/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete public
+      operationId: deletepublic
+      parameters:
+      - description: Public ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Public data
+          schema:
+            $ref: '#/definitions/genprotos.PublicDelete'
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+        "404":
+          description: Public not found
+          schema:
+            type: string
+        "500":
+          description: Server error
+          schema:
+            type: string
+      summary: Delete public
+      tags:
+      - Public
+    get:
+      consumes:
+      - application/json
+      description: Get Public by ID
+      operationId: getpublicbyid
+      parameters:
+      - description: Public ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Public data
+          schema:
+            $ref: '#/definitions/genprotos.PublicGetById'
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+        "404":
+          description: Public not found
+          schema:
+            type: string
+        "500":
+          description: Server error
+          schema:
+            type: string
+      summary: Get Public By ID
+      tags:
+      - Public
+    put:
+      consumes:
+      - application/json
+      description: Update public
+      operationId: updatepublic
+      parameters:
+      - description: Public ID
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: Public data
+        in: body
+        name: public
+        required: true
+        schema:
+          $ref: '#/definitions/genprotos.PublicUpdate'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Public data
+          schema:
+            $ref: '#/definitions/genprotos.PublicUpdate'
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+        "404":
+          description: Public not found
+          schema:
+            type: string
+        "500":
+          description: Server error
+          schema:
+            type: string
+      summary: Update public
+      tags:
+      - Public
+  /publics:
+    get:
+      consumes:
+      - application/json
+      description: Get all publics
+      operationId: getallpublics
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Public data
+          schema:
+            $ref: '#/definitions/genprotos.PublicGetAllReq'
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+        "404":
+          description: Public not found
+          schema:
+            type: string
+        "500":
+          description: Server error
+          schema:
+            type: string
+      summary: Get all publics
+      tags:
+      - Public
+swagger: "2.0"

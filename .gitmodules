@@ -1,3 +1,12 @@
 [submodule "public-service/proto-service/voting-protos"]
 	path = public-service/proto-service/voting-protos
 	url = git@github.com:Azizbek-Qodirov/voting-protos.git
+[submodule "api-gateway/proto-service/voting-protos"]
+	path = api-gateway/proto-service/voting-protos
+	url = git@github.com:Azizbek-Qodirov/voting-protos.git
+[submodule "voting-service/voting-protos"]
+	path = voting-service/voting-protos
+	url = git@github.com:Azizbek-Qodirov/voting-protos.git
+[submodule "voting-service/proto-service/voting-protos"]
+	path = voting-service/proto-service/voting-protos
+	url = git@github.com:Azizbek-Qodirov/voting-protos.git
